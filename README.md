@@ -7,19 +7,9 @@
 
 ## Run It
 
-Substitute `SERVICE` with one of: `db` | `backend` | `frontend`
+1. Build images and up containers
 
-1. Build images and up containers in detached mode
-
-        docker-compose up --build -d
-
-1. Check status
-
-        docker-compose ps
-
-1. View logs
-
-        docker-compose logs -f SERVICE
+        docker-compose up --build
 
 1. Navigate to TODO
 
