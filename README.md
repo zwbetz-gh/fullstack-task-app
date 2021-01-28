@@ -22,7 +22,7 @@ Substitute `SERVICE` with one of: `db` | `backend` | `frontend`
 
 1. Navigate to TODO
 
-## Various Tasks
+## For Fun Tasks
 
 ### Connect To The Database Server Via psql
 
