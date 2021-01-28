@@ -4,9 +4,8 @@ services:
     build:
       context: db
       dockerfile: Dockerfile
-    environment:
-      POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: postgres
+    env_file:
+      - .env
     ports:
       - published: 5555
         target: 5432
@@ -14,14 +13,8 @@ services:
     build:
       context: backend
       dockerfile: Dockerfile
-    environment:
-      SPRING_PROFILES_ACTIVE: clean-db,migrate-db
-      SPRING_DATASOURCE_URL: jdbc:postgresql://db:5432/task_db?currentSchema=task_schema
-      SPRING_DATASOURCE_USERNAME: postgres
-      SPRING_DATASOURCE_PASSWORD: postgres
-      SPRING_FLYWAY_ENABLED: "true"
-      SPRING_FLYWAY_LOCATIONS: classpath:db/migration
-      SPRING_FLYWAY_SCHEMAS: task_schema
+    env_file:
+      - .env
     ports:
       - published: 8888
         target: 8080

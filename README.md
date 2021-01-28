@@ -3,6 +3,7 @@
 ## One-Time Setup
 
 1. Install [Docker](https://docs.docker.com/get-docker/)
+1. Copy file `.env.sample` to new file `.env`
 
 ## Run It
 
