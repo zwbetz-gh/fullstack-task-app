@@ -27,6 +27,9 @@ Substitute `SERVICE` with one of: `db` | `backend` | `frontend`
 
 ### Connect To The Database Server Via psql
 
+<details>
+<summary>Steps</summary>
+
 1. Run a shell inside the container
 
         docker-compose run db bash
@@ -55,6 +58,13 @@ Substitute `SERVICE` with one of: `db` | `backend` | `frontend`
 
         exit
 
+</details>
+
 ### Hit Swagger
 
+<details>
+<summary>Steps</summary>
+
 TODO
+
+</details>
