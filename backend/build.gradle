@@ -1,0 +1,42 @@
+plugins {
+	id 'org.springframework.boot' version '2.4.2'
+	id 'io.spring.dependency-management' version '1.0.11.RELEASE'
+	id 'java'
+}
+
+group = 'com.example'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '11'
+
+configurations {
+	compileOnly {
+		extendsFrom annotationProcessor
+	}
+}
+
+repositories {
+	mavenCentral()
+}
+
+ext {
+  springVersion = '2.4.2'
+  flywayVersion = '7.1.1'
+  postgresqlVersion = '42.2.18'
+  lombokVersion = '1.18.16'
+}
+
+dependencies {
+	implementation "org.springframework.boot:spring-boot-starter-actuator:${springVersion}"
+	implementation "org.springframework.boot:spring-boot-starter-data-jpa:${springVersion}"
+	implementation "org.springframework.boot:spring-boot-starter-web:${springVersion}"
+	implementation "org.flywaydb:flyway-core:${flywayVersion}"
+  runtimeOnly "org.postgresql:postgresql:${postgresqlVersion}"
+	compileOnly "org.projectlombok:lombok:${lombokVersion}"
+	developmentOnly "org.springframework.boot:spring-boot-devtools:${springVersion}"
+	annotationProcessor "org.projectlombok:lombok:${lombokVersion}"
+	testImplementation "org.springframework.boot:spring-boot-starter-test:${springVersion}"
+}
+
+test {
+	useJUnitPlatform()
+}
