@@ -7,8 +7,8 @@ services:
     env_file:
       - .env
     ports:
-      - published: 5555
-        target: 5432
+      - published: ${DB_PORTS_PUBLISHED}
+        target: ${DB_PORTS_TARGET}
   backend:
     build:
       context: backend
@@ -16,7 +16,7 @@ services:
     env_file:
       - .env
     ports:
-      - published: 8888
-        target: 8080
+      - published: ${BACKEND_PORTS_PUBLISHED}
+        target: ${BACKEND_PORTS_TARGET}
     depends_on:
       - db
