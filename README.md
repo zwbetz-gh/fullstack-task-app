@@ -5,7 +5,7 @@ A Fullstack Task App that uses [Postgres](https://www.postgresql.org/) for `db`,
 ## One-Time Setup
 
 1. Install [Docker](https://docs.docker.com/get-docker/)
-1. Copy file `.env.sample` to new file `.env`. The default values work well, but feel free to change them if desired
+1. Copy file `.env.sample` to new file `.env`
 
 ## Run It
 
@@ -22,6 +22,30 @@ Java is a compiled language, so changes to the `backend` require a `build` and `
 JavaScript is an interpreted language (in this context), so changes to the `frontend` are hot reloaded via [Docker Compose Volumes](https://docs.docker.com/compose/compose-file/compose-file-v3/#volumes) and the [Vue CLI `serve` command](https://cli.vuejs.org/guide/cli-service.html#using-the-binary).
 
 ## For Fun Tasks
+
+### Run The `backend` Locally
+
+<details>
+<summary>Steps</summary>
+
+1. Up the `db` in detached mode
+
+        docker-compose up --build -d db
+
+1. Navigate to the `backend`
+
+        cd backend
+
+1. Copy file `.env.sample` to new file `.env.local`
+1. Source environment variables in your shell
+
+        source task_setenv.sh
+
+1. Run the `backend` locally. This uses the included [gradle wrapper](https://docs.gradle.org/current/userguide/gradle_wrapper.html)
+
+        ./gradlew bootRun -Dserver.port=8888
+
+</details>
 
 ### Connect To The Database Server Via psql
 
