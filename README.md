@@ -19,7 +19,7 @@ A Fullstack Task App that uses [Postgres](https://www.postgresql.org/) for `db`,
 
 Java is a compiled language, so changes to the `backend` require a `build` and `up` (or a `up --build backend`) to be reloaded.
 
-JavaScript is _generally_ an interpreted language, so changes to the `frontend` are hot reloaded via [Docker Compose Volumes](https://docs.docker.com/compose/compose-file/compose-file-v3/#volumes) and the [Vue CLI `serve` command](https://cli.vuejs.org/guide/cli-service.html#using-the-binary).
+JavaScript is an interpreted language (in this context), so changes to the `frontend` are hot reloaded via [Docker Compose Volumes](https://docs.docker.com/compose/compose-file/compose-file-v3/#volumes) and the [Vue CLI `serve` command](https://cli.vuejs.org/guide/cli-service.html#using-the-binary).
 
 ## For Fun Tasks
 
