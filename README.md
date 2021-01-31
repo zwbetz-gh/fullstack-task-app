@@ -3,7 +3,7 @@
 ## One-Time Setup
 
 1. Install [Docker](https://docs.docker.com/get-docker/)
-1. Copy file `.env.sample` to new file `.env`
+1. Copy file `.env.sample` to new file `.env`. The default values work well, but feel free to change them if desired
 
 ## Run It
 
@@ -11,7 +11,7 @@
 
         docker-compose up --build
 
-1. Navigate to TODO
+1. Navigate to [`http://localhost:9999`](http://localhost:9999)
 
 ## For Fun Tasks
 
