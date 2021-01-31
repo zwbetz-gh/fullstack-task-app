@@ -1,5 +1,7 @@
 # Fullstack Task App
 
+A Fullstack Task App that uses [Postgres](https://www.postgresql.org/) for `db`, [Spring Boot](https://spring.io/projects/spring-boot) for `backend`, [Vue.js](https://vuejs.org/) for `frontend`, and [Docker Compose](https://docs.docker.com/compose/) to glue it all together.
+
 ## One-Time Setup
 
 1. Install [Docker](https://docs.docker.com/get-docker/)
@@ -11,7 +13,13 @@
 
         docker-compose up --build
 
-1. Navigate to [`http://localhost:9999`](http://localhost:9999)
+1. Navigate to the `frontend` via [`http://localhost:9999`](http://localhost:9999)
+
+## Hot Reloading
+
+Java is a compiled language, so changes to the `backend` require a `build` and `up` (or a `up --build backend`) to be reloaded.
+
+JavaScript is _generally_ an interpreted language, so changes to the `frontend` are hot reloaded via [Docker Compose Volumes](https://docs.docker.com/compose/compose-file/compose-file-v3/#volumes) and the [Vue CLI `serve` command](https://cli.vuejs.org/guide/cli-service.html#using-the-binary).
 
 ## For Fun Tasks
 
