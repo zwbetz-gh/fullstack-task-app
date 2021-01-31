@@ -47,6 +47,30 @@ JavaScript is an interpreted language (in this context), so changes to the `fron
 
 </details>
 
+### Run The `frontend` Locally
+
+<details>
+<summary>Steps</summary>
+
+1. Install [Node.js](https://nodejs.org/en/download/) version 14 or higher
+1. Up the `db` and `backend` in detached mode
+
+        docker-compose up --build -d db backend
+
+1. Navigate to the `frontend`
+
+        cd frontend
+
+1. Download dependencies
+
+        npm install
+
+1. Run the `frontend` locally
+
+        npm run serve -- --port 9999
+
+</details>
+
 ### Connect To The Database Server Via psql
 
 <details>
