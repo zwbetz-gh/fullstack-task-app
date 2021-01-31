@@ -20,3 +20,23 @@ services:
         target: ${BACKEND_PORTS_TARGET}
     depends_on:
       - db
+  frontend:
+    build:
+      context: frontend
+      dockerfile: Dockerfile
+    env_file:
+      - .env
+    ports:
+      - published: ${FRONTEND_PORTS_PUBLISHED}
+        target: ${FRONTEND_PORTS_TARGET}
+    depends_on:
+      - backend
+    stdin_open: true
+    tty: true
+    volumes:
+      - type: bind
+        source: ./frontend/public
+        target: /app/public
+      - type: bind
+        source: ./frontend/src
+        target: /app/src
