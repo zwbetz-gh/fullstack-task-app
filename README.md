@@ -22,9 +22,14 @@ A Fullstack Task App that uses:
 
 ## Hot Reloading
 
+<details>
+<summary>Info</summary>
+
 Java is a compiled language, so changes to the `backend` require a `build` and `up` to be reloaded.
 
 JavaScript is an interpreted language (in this context), so changes to the `frontend` are hot reloaded via [Docker Compose Volumes](https://docs.docker.com/compose/compose-file/compose-file-v3/#volumes) and the [Vue CLI `serve` command](https://cli.vuejs.org/guide/cli-service.html#using-the-binary).
+
+</details>
 
 ## Run The `backend` Locally
 
