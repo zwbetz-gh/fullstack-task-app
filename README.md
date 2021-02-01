@@ -43,7 +43,7 @@ JavaScript is an interpreted language (in this context), so changes to the `fron
 
 1. Run the `backend` locally. This uses the included [gradle wrapper](https://docs.gradle.org/current/userguide/gradle_wrapper.html)
 
-        ./gradlew bootRun -Dserver.port=8888
+        ./gradlew bootRun
 
 </details>
 
