@@ -28,6 +28,7 @@ JavaScript is an interpreted language (in this context), so changes to the `fron
 <details>
 <summary>Steps</summary>
 
+1. Install [Java](https://adoptopenjdk.net/) version 11 or higher
 1. Up the `db` in detached mode
 
         docker-compose up --build -d db
