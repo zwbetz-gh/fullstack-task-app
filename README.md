@@ -26,9 +26,7 @@ Java is a compiled language, so changes to the `backend` require a `build` and `
 
 JavaScript is an interpreted language (in this context), so changes to the `frontend` are hot reloaded via [Docker Compose Volumes](https://docs.docker.com/compose/compose-file/compose-file-v3/#volumes) and the [Vue CLI `serve` command](https://cli.vuejs.org/guide/cli-service.html#using-the-binary).
 
-## For Fun Tasks
-
-### Run The `backend` Locally
+## Run The `backend` Locally
 
 <details>
 <summary>Steps</summary>
@@ -53,7 +51,7 @@ JavaScript is an interpreted language (in this context), so changes to the `fron
 
 </details>
 
-### Run The `frontend` Locally
+## Run The `frontend` Locally
 
 <details>
 <summary>Steps</summary>
@@ -77,7 +75,7 @@ JavaScript is an interpreted language (in this context), so changes to the `fron
 
 </details>
 
-### Connect To The Database Server Via psql
+## Connect To The Database Server Via psql
 
 <details>
 <summary>Steps</summary>
