@@ -111,12 +111,3 @@ JavaScript is an interpreted language (in this context), so changes to the `fron
         exit
 
 </details>
-
-### Hit Swagger
-
-<details>
-<summary>Steps</summary>
-
-TODO
-
-</details>
