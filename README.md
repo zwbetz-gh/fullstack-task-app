@@ -7,12 +7,25 @@ A Fullstack Task App that uses:
 - [Vue.js](https://vuejs.org/) for `frontend`
 - [Docker Compose](https://docs.docker.com/compose/) to glue it all together
 
+## Table of Contents
+
+<!-- toc -->
+
+- [One-Time Setup](#one-time-setup)
+- [Run Everything With Docker Compose](#run-everything-with-docker-compose)
+- [Hot Reloading](#hot-reloading)
+- [Run The `backend` Locally](#run-the-backend-locally)
+- [Run The `frontend` Locally](#run-the-frontend-locally)
+- [Connect To The Database Server Via psql](#connect-to-the-database-server-via-psql)
+
+<!-- tocstop -->
+
 ## One-Time Setup
 
 1. Install [Docker](https://docs.docker.com/get-docker/)
 1. Copy file `.env.sample` to new file `.env`
 
-## Run It
+## Run Everything With Docker Compose
 
 1. Build images and up containers
 
@@ -22,19 +35,11 @@ A Fullstack Task App that uses:
 
 ## Hot Reloading
 
-<details>
-<summary>Info</summary>
-
 Java is a compiled language, so changes to the `backend` require a `build` and `up` to be reloaded.
 
 JavaScript is an interpreted language (in this context), so changes to the `frontend` are hot reloaded via [Docker Compose Volumes](https://docs.docker.com/compose/compose-file/compose-file-v3/#volumes) and the [Vue CLI `serve` command](https://cli.vuejs.org/guide/cli-service.html#using-the-binary).
 
-</details>
-
 ## Run The `backend` Locally
-
-<details>
-<summary>Steps</summary>
 
 1. Install [Java](https://adoptopenjdk.net/) version 11 or higher
 1. Up the `db` in detached mode
@@ -54,12 +59,7 @@ JavaScript is an interpreted language (in this context), so changes to the `fron
 
         ./gradlew bootRun
 
-</details>
-
 ## Run The `frontend` Locally
-
-<details>
-<summary>Steps</summary>
 
 1. Install [Node.js](https://nodejs.org/en/download/) version 14 or higher
 1. Up the `db` and `backend` in detached mode
@@ -78,12 +78,7 @@ JavaScript is an interpreted language (in this context), so changes to the `fron
 
         npm run serve -- --port 9999
 
-</details>
-
 ## Connect To The Database Server Via psql
-
-<details>
-<summary>Steps</summary>
 
 1. Run a shell inside the container
 
@@ -112,5 +107,3 @@ JavaScript is an interpreted language (in this context), so changes to the `fron
 1. Exit the container
 
         exit
-
-</details>
