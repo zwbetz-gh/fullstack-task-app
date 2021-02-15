@@ -1,5 +1,3 @@
-DROP TABLE IF EXISTS task CASCADE;
-
 CREATE TABLE task (
   id INT NOT NULL GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
   created_date TIMESTAMPTZ NOT NULL DEFAULT NOW(),
@@ -7,3 +5,16 @@ CREATE TABLE task (
   content TEXT NOT NULL,
   done BOOLEAN NOT NULL DEFAULT FALSE
 );
+
+
+CREATE FUNCTION lastmod_func() RETURNS trigger AS $$
+BEGIN
+  NEW.last_modified_date := NOW();
+  RETURN NEW;
+END;
+$$ LANGUAGE plpgsql;
+
+
+CREATE TRIGGER lastmod_trigger
+BEFORE UPDATE ON task
+FOR EACH ROW EXECUTE PROCEDURE lastmod_func();
