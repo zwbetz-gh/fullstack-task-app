@@ -70,7 +70,7 @@ JavaScript is an interpreted language (in this context), so changes to the `fron
 
         cd frontend
 
-1. Copy file `.env.sample` to new file `.env`
+1. Copy file `.env.sample` to new file `.env.local`
 1. Download dependencies
 
         npm install
