@@ -2,6 +2,8 @@
 
 A Fullstack Task App that uses [Postgres](https://www.postgresql.org/) for `db`, [Spring Boot](https://spring.io/projects/spring-boot) for `backend`, [React](https://reactjs.org/) for `frontend`, and [Docker Compose](https://docs.docker.com/compose/) to glue it all together.
 
+Why do this? Well, these are popular tools, so it's nice to have a sample project showing how they fit together.
+
 ## Table of Contents
 
 <!-- toc -->
