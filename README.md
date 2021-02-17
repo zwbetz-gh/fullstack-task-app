@@ -4,7 +4,7 @@ A Fullstack Task App that uses:
 
 - [Postgres](https://www.postgresql.org/) for `db`
 - [Spring Boot](https://spring.io/projects/spring-boot) for `backend`
-- [Vue.js](https://vuejs.org/) for `frontend`
+- [React](https://reactjs.org/) for `frontend`
 - [Docker Compose](https://docs.docker.com/compose/) to glue it all together
 
 ## Table of Contents
@@ -31,13 +31,13 @@ A Fullstack Task App that uses:
 
         docker-compose up --build
 
-1. Navigate to the `frontend` via [`http://localhost:9999`](http://localhost:9999)
+1. Navigate to the `frontend` via [`http://localhost:7777`](http://localhost:7777)
 
 ## Hot Reloading
 
 Java is a compiled language, so changes to the `backend` require a `build` and `up` to be reloaded.
 
-JavaScript is an interpreted language (in this context), so changes to the `frontend` are hot reloaded via [Docker Compose Volumes](https://docs.docker.com/compose/compose-file/compose-file-v3/#volumes) and the [Vue CLI `serve` command](https://cli.vuejs.org/guide/cli-service.html#using-the-binary).
+JavaScript is an interpreted language (in this context), so changes to the `frontend` are hot reloaded via Docker Compose [Volumes](https://docs.docker.com/compose/compose-file/compose-file-v3/#volumes) and the Create React App [start script](https://create-react-app.dev/docs/getting-started#npm-start-or-yarn-start).
 
 ## Run The `backend` Locally
 
@@ -70,13 +70,14 @@ JavaScript is an interpreted language (in this context), so changes to the `fron
 
         cd frontend
 
+1. Copy file `.env.sample` to new file `.env`
 1. Download dependencies
 
         npm install
 
 1. Run the `frontend` locally
 
-        npm run serve -- --port 9999
+        npm run start
 
 ## Connect To The Database Server Via psql
 
