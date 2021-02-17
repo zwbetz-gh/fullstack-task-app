@@ -1,11 +1,6 @@
 # Fullstack Task App
 
-A Fullstack Task App that uses:
-
-- [Postgres](https://www.postgresql.org/) for `db`
-- [Spring Boot](https://spring.io/projects/spring-boot) for `backend`
-- [React](https://reactjs.org/) for `frontend`
-- [Docker Compose](https://docs.docker.com/compose/) to glue it all together
+A Fullstack Task App that uses [Postgres](https://www.postgresql.org/) for `db`, [Spring Boot](https://spring.io/projects/spring-boot) for `backend`, [React](https://reactjs.org/) for `frontend`, and [Docker Compose](https://docs.docker.com/compose/) to glue it all together.
 
 ## Table of Contents
 
